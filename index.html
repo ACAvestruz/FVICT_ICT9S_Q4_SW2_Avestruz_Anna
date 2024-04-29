@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab">
+
+	<title>Q4 Seatwork 2</title>
+
+	<style>
+ 		body {background-color: #0e1111;}
+ 		label {
+ 			color: white;
+ 			font-family: Roboto Slab;
+ 			font-size:25px;
+ 		}
+ 		input[type="number"]{
+ 			background-color:#0e1111;
+ 			border: 2px solid white;
+  			border-radius: 4px;
+  			color:white;
+  			font-family:Roboto Slab;
+ 		}
+ 		button{
+ 			font-family:Roboto Slab;
+ 		}
+  	</style>
+</head>
+<body>
+		<div style="margin-top:75px; margin-left:365px; margin-right:350px; margin-bottom:70px; border: 5px dashed white; padding-left:75px; padding-top:30px; padding-bottom: 30px">
+		<form class="form-group">
+			<label id="num1">Enter a value for x</label>
+				<input type="number" class="form-control col-md-10" id="input1" placeholder="x">
+			<br>
+			<label id="num2">Enter a value for y</label>
+				<input type="number" class="form-control col-md-10" id="input2" placeholder="y">
+		</div>
+		<center>
+		<div style="padding-top:20px">
+			<button class="btn btn-lg col-md-5 btn-dark" id="button1" onclick="add()">
+				Addition (x + y)</button>
+			<button class="btn btn-lg col-md-5 btn-dark" id="button2" onclick="product()">
+				Multiplication (x * y)</button>
+		</div>
+		<div style="padding-top:20px">
+			<button class="btn btn-lg col-md-5 btn-dark" id="button3" onclick="compare()">
+				Is x greater than y?</button>
+			<button class="btn btn-lg col-md-5 btn-dark" id="button3" onclick="modulus()">
+				What is the remainder of x/y?</button>
+		</div>
+				</center>
+		</form>
+
+	<script type="text/javascript">
+		function add(){
+			var num1 = document.getElementById("input1").value; //assign value
+			var num2 = document.getElementById("input2").value; //assign value
+			var sum = Number(num1) + Number(num2); //add the numbers
+
+			window.alert("x + y = " + sum);
+		}
+		function product(){
+			var num1 = document.getElementById("input1").value; //assign value
+			var num2 = document.getElementById("input2").value; //assign value
+			var product = Number(num1) * Number(num2); //add the numbers
+
+			window.alert("x * y = " + product);
+		}
+		function compare(){
+			var num1 = document.getElementById("input1").value; //assign value
+			var num2 = document.getElementById("input2").value; //assign value
+			var compare = Number(num1) > Number(num2); //add the numbers
+
+			window.alert("Answer: " + compare);
+		}
+		function modulus(){
+			var num1 = document.getElementById("input1").value; //assign value
+			var num2 = document.getElementById("input2").value; //assign value
+			var modulus = Number(num1) % Number(num2); //add the numbers
+
+			window.alert("remainder = " + modulus);
+		}
+	</script>
+</body>
+</html>
